@@ -1,3 +1,5 @@
+import "./styles.css";
+
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("mobile-menu-open");
   const closeButton = document.getElementById("mobile-menu-close");
