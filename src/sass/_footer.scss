@@ -1,0 +1,88 @@
+@use 'variables';
+
+.footer {
+  background-color: variables.$color-background-black;
+  color: variables.$text-color-white;
+  padding: 1rem 0;
+}
+
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer__left {
+  width: 100%;
+}
+
+.footer__bold {
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer__socials a {
+  color: variables.$text-color-gray;
+}
+
+.footer__btns {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: start;
+}
+
+.footer__btn {
+  display: flex;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  gap: 1rem;
+  align-items: center;
+  min-width: 190px;
+}
+
+.footer__btn i {
+  font-size: 2rem;
+}
+
+.btn__large {
+  display: block;
+  font-size: 1rem;
+}
+
+.footer__text {
+  color: variables.$text-color-gray;
+  font-size: 11px;
+  margin-top: 2rem;
+}
+
+@media (min-width: variables.$breakpoint-md) {
+  .footer__btns {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: variables.$breakpoint-lg) {
+  .footer__container {
+    gap: 4rem;
+    flex-direction: row;
+
+  }
+}
