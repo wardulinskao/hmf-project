@@ -1,0 +1,83 @@
+@use 'variables';
+
+.prizes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.prizes__title {
+  font-size: 3rem;
+  padding: 3rem 0;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.prizes__container {
+  display: grid;
+  gap: 1rem;
+}
+
+.prizes__item {
+  background-color: variables.$color-background-white;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.item__prize {
+  margin: 1.5rem 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.item__description {
+  max-width: 150px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.prizes__button {
+  background-color: variables.$color-green;
+  padding: 1rem 5rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.prizes__button:hover {
+  background-color: variables.$color-green-hover;
+}
+
+.prizes__disclaimer {
+  font-size: 0.8rem;
+  color: variables.$text-color-gray;
+}
+
+@media (min-width: variables.$breakpoint-md) {
+  .prizes__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: variables.$breakpoint-lg) {
+  .prizes__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .prizes__item {
+    padding: 2rem 6rem;
+  }
+}
