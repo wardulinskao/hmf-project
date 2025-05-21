@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./sass/main.scss";
 
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("mobile-menu-open");

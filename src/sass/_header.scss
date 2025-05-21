@@ -1,45 +1,22 @@
-:root {
-  --text-color-white: #eeeeee;
-  --text-color-gray: #a8a8a8;
-  --color-red: #cd0511;
-  --color-green: #179149;
-  --color-green-hover: rgb(11, 116, 55);
-  --color-border-gray: #5a5a5a;
-  --color-background-black: #161616;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
+@use 'variables';
 
 .header {
-  background-color: var(--color-background-black);
-  color: var(--text-color-white);
+  background-color: variables.$color-background-black;
+  color: variables.$text-color-white;
   padding: 1rem 0;
 }
 
 .header a {
   text-decoration: none;
-  color: var(--text-color-white);
+  color: variables.$text-color-white;
 }
 
 .header a:hover {
-  color: var(--text-color-gray);
+  color: variables.$text-color-gray;
 }
 
 .header button {
-  color: var(--text-color-white);
+  color: variables.$text-color-white;
   font-size: 1rem;
   border-radius: 0.25rem;
   font-family: inherit;
@@ -60,7 +37,7 @@ button {
   justify-content: space-between;
   width: 100%;
   display: none;
-  color: var(--text-color-gray);
+  color: variables.$text-color-gray;
   font-size: 10px;
 }
 
@@ -71,7 +48,7 @@ button {
   justify-content: space-between;
   width: 100%;
   font-size: 0.8rem;
-  color: var(--text-color-gray);
+  color: variables.$text-color-gray;
   font-size: 10px;
   gap: 0.5rem;
 }
@@ -94,7 +71,7 @@ button {
 }
 
 .header__info a {
-  border-right: 1px solid var(--color-border-gray);
+  border-right: 1px solid variables.$color-border-gray;
   padding-right: 1rem;
 }
 
@@ -130,17 +107,17 @@ button {
 
 .header__buttons--login {
   background: none;
-  border: 1px solid var(--color-red);
+  border: 1px solid variables.$color-red;
   margin-right: 0.5rem;
   padding: 0.5rem 1.5rem;
 }
 
 .header__buttons--login:hover {
-  background: var(--color-red);
+  background: variables.$color-red;
 }
 
 .header__buttons--register {
-  background-color: var(--color-green);
+  background-color: variables.$color-green;
   border: none;
   outline: none;
   color: white;
@@ -148,11 +125,11 @@ button {
 }
 
 .header__buttons--register:hover {
-  background-color: var(--color-green-hover);
+  background-color: variables.$color-green-hover;
 }
 
 .header__buttons--download {
-  border: 1px solid var(--color-border-gray);
+  border: 1px solid variables.$color-border-gray;
   background: none;
   padding: 0.5rem 1rem;
   display: flex;
@@ -163,7 +140,7 @@ button {
 }
 
 .header__buttons--download:hover {
-  background-color: var(--color-border-gray);
+  background-color: variables.$color-border-gray;
 }
 
 .header__buttons--icon {
@@ -182,7 +159,7 @@ button {
 }
 
 .header__mobile {
-  background-color: var(--color-background-black);
+  background-color: variables.$color-background-black;
   position: fixed;
   top: 0;
   left: 0;
@@ -200,7 +177,7 @@ button {
   display: flex;
 }
 
-@media (min-width: 768px) {
+@media (min-width: variables.$breakpoint-md) {
   .container {
     gap: 0rem;
   }
@@ -223,7 +200,7 @@ button {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: variables.$breakpoint-lg) {
   .header__bottom {
     flex-direction: row;
   }
