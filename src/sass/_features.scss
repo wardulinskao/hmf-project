@@ -1,0 +1,64 @@
+@use 'variables';
+
+.features {
+  text-align: center;
+  background-color: variables.$color-background-white;
+  padding: 0 2rem;
+}
+
+.features__title {
+  font-size: 3rem;
+  padding: 3rem 0;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.features__container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.features__items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 1rem 0;
+}
+
+.features__item {
+  max-width: 13rem;
+  text-align: center;
+
+}
+
+.features__img {
+  align-self: center;
+  order: 1;
+  max-width: 100%;
+}
+
+.features__icon {
+  max-width: 40%;
+}
+
+@media (min-width: variables.$breakpoint-md) {
+  .features__img {
+    align-self: flex-end;
+    order: initial;
+    max-width: 50%;
+  }
+
+  .features__container {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .features__item {
+    text-align: left;
+  }
+}

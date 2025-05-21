@@ -1,0 +1,128 @@
+@use 'variables';
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('../assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+}
+
+.hero__header {
+  font-size: 4.5rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  line-height: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.header__gradient {
+  display: block;
+  background: variables.$gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 720px;
+}
+
+.form__title {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.form__button {
+  background-color: variables.$color-green;
+  padding: 1rem 5rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form__button:hover {
+  background-color: variables.$color-green-hover;
+}
+
+.form__row {
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.form__phone {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+
+}
+
+.form__code {
+  max-width: 80px;
+}
+
+.form__error {
+  text-align: left;
+  align-self: flex-start;
+  min-height: 1rem;
+  color: variables.$color-red;
+}
+
+.form__row input,
+.form__row select {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.form__footer {
+  align-self: flex-start;
+  color: variables.$text-color-gray;
+  margin-top: 1rem;
+}
+
+.form__footer a {
+  color: variables.$color-red;
+  text-decoration: none;
+}
+
+@media (min-width: variables.$breakpoint-sm) {
+  .form__phone {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: variables.$breakpoint-md) {
+  .form__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__form {
+    width: 100%;
+  }
+}

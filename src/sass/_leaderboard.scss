@@ -1,0 +1,168 @@
+@use 'variables';
+
+.leaderboard {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: variables.$color-background-white;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leaderboard__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 4rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaderboard__title {
+  font-size: 3rem;
+  padding: 3rem 0;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.leaderboard__winners {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.leaderboard__winner {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.winner__ribbon {
+  position: absolute;
+  top: 12px;
+  right: -45px;
+  width: 170px;
+  background: variables.$gradient;
+  color: white;
+  text-align: center;
+  transform: rotate(45deg);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.winner__title {
+  background: variables.$gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.winner__number {
+  color: variables.$text-color-gray;
+}
+
+.winner__gain {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.winner__gain span {
+  color: variables.$color-red;
+}
+
+.leaderboard__rankings {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.rankings__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.rankings__header {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: variables.$color-red;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.rankings__row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #DEDEDE;
+  padding: 1rem 0;
+}
+
+.rankings__row p:nth-of-type(2) {
+  font-weight: 700;
+}
+
+.rankings__row:nth-of-type(2) {
+  border-top: 1px solid #DEDEDE;
+}
+
+.rankings__disclaimer {
+  color: variables.$text-color-gray;
+  font-size: 12px;
+  margin-top: 1rem;
+}
+
+.leaderboard__button {
+  background-color: variables.$color-green;
+  padding: 1rem 5rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.leaderboard__button:hover {
+  background-color: variables.$color-green-hover;
+}
+
+.leaderboard__disclaimer {
+  font-size: 0.8rem;
+  color: variables.$text-color-gray;
+}
+
+@media (min-width: variables.$breakpoint-lg) {
+  .leaderboard__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .leaderboard__winners {
+    align-items: end;
+  }
+
+  .leaderboard__winner {
+    flex-direction: row;
+    text-align: left;
+  }
+}
