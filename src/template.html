@@ -82,6 +82,54 @@
     </div>
   </header>
   <main>
+    <section class="hero">
+      <h1 class="hero__header"><span class="header__gradient">Lorem ipsum dolor</span>
+        <span>sit amet tosik </span>
+      </h1>
+      <form class="hero__form" id="registerForm">
+        <h3 class="form__title">Lorem ipsum dolor sit amet</h3>
+
+        <div class="form__row">
+          <input type="text" placeholder="First Name" id="firstName">
+          <input type="text" placeholder="Last Name" id="lastName">
+        </div>
+
+        <div class="form__row">
+          <select id="country">
+            <option value="" selected disabled>Country</option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="IN">India</option>
+          </select>
+          <div class="form__phone">
+            <input class="form__code" type="text" placeholder="Code" id="code" readonly>
+            <input type="text" placeholder="Phone" id="phone">
+          </div>
+        </div>
+
+        <div class="form__row">
+          <input type="text" placeholder="Email" id="email">
+          <select id="experience">
+            <option value="" selected disabled>Experience</option>
+            <option value="junior">Junior</option>
+            <option value="mid">Mid-Level</option>
+            <option value="senior">Senior</option>
+          </select>
+        </div>
+
+        <p id="error" class="form__error"></p>
+
+        <div class="form__footer">
+          <input type="checkbox" id="terms">
+          <label for="terms">I have read and accepted the
+            <a href="#">Privacy Policy</a> and
+            <a href="#">Terms and Conditions</a>
+          </label>
+        </div>
+        <button class="form__button" type="submit" id="registerBtn">Join Now</button>
+      </form>
+    </section>
+
     <section class="features">
       <h2 class="features__title">Quisque rutrum</h2>
       <div class="features__container">
